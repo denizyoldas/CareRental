@@ -27,7 +27,7 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public List<CarDetailDto> GetProductDetails()
+        public List<CarDetailDto> GetCarDetails()
         {
             using (CarRentalContext context = new CarRentalContext())
             {
