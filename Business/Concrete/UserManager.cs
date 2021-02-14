@@ -23,9 +23,10 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        public IDataResult<User> Get()
+        public IDataResult<User> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = _UserDal.Get(u => u.Id == id);
+            return new SuccessDataResult<User>(result);
         }
 
         public IDataResult<List<User>> GetAll()
